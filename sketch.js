@@ -58,7 +58,7 @@ function setup() {
   restart = createSprite(width / 2,height / 2);
   restart.addImage(restartImg);
   
-  gameOver = createSprite(restart.x, restart.y - 10);
+  gameOver = createSprite(restart.x, restart.y - 50);
   gameOver.addImage(gameOverImg);
  
   gameOver.scale = 0.5;
@@ -110,7 +110,7 @@ function draw() {
     }
     
     //jump when the space key is pressed
-    if(keyDown("space")&& trex.y >= 161) {
+    if(keyWentDown("space")&& trex.y >= windowWidth / 2 - 250) {
         trex.velocityY = -12;
         jumpSound.play();
     }
